@@ -82,7 +82,7 @@ describe("Council", () => {
 
   it("counts the last VOTE marker in a ballot", () => {
     const result = tallyVotes(["architect", "security"], [
-      "I would VOTE: architect only if the risks are addressed.\\nVOTE: security",
+      "I would VOTE: architect only if the risks are addressed.\nVOTE: security",
     ]);
     assert.deepEqual(result, { winner: "security", votes: { architect: 0, security: 1 } });
   });
