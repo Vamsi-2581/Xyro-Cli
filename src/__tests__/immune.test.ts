@@ -116,7 +116,7 @@ describe("Sentinel", () => {
   });
 
   it("ignores a setext heading underline as a conflict marker", () => {
-    const findings = scanText("README.md", "Section\\n=======\\n");
+    const findings = scanText("README.md", "Section\n=======\n");
     assert.equal(findings.filter((x) => x.kind === "merge conflict marker").length, 0);
   });
 
